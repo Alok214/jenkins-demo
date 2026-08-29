@@ -347,12 +347,12 @@ pipeline {
 
                 def sgRowsHtml = sg.rows.collect { row ->
                     def cells = row.split('\\|').collect { it.trim() }.findAll { it }
-                    "<tr>${cells.collect { \"<td style='padding:8px 12px;border-bottom:1px solid #edf2f7;font-size:13px'>\${it}</td>\" }.join('')}</tr>"
+                    "<tr>${cells.collect { cell -> '<td style="padding:8px 12px;border-bottom:1px solid #edf2f7;font-size:13px">' + cell + '</td>' }.join('')}</tr>"
                 }.join('')
 
                 def owaspRowsHtml = owasp.rows.collect { row ->
                     def cells = row.split('\\|').collect { it.trim() }.findAll { it }
-                    "<tr>${cells.collect { \"<td style='padding:8px 12px;border-bottom:1px solid #edf2f7;font-size:13px'>\${it}</td>\" }.join('')}</tr>"
+                    "<tr>${cells.collect { cell -> '<td style="padding:8px 12px;border-bottom:1px solid #edf2f7;font-size:13px">' + cell + '</td>' }.join('')}</tr>"
                 }.join('')
 
                 def overallBanner = overallFail
