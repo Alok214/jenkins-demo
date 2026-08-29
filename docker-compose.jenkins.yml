@@ -1,0 +1,15 @@
+services:
+  jenkins:
+    image: jenkins/jenkins:lts
+    container_name: jenkins-lts
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    volumes:
+      - jenkins_home:/var/jenkins_home
+      # Allow Jenkins to run docker build (like sosuv agent does)
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped
+
+volumes:
+  jenkins_home:
