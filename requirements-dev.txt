@@ -1,0 +1,7 @@
+-r requirements.txt
+pytest==8.3.4
+pytest-cov==6.0.0
+pytest-html==4.1.1
+flake8==7.1.1
+pip-audit==2.9.0
+semgrep==1.80.0

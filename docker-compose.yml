@@ -1,0 +1,18 @@
+services:
+  jenkins-demo-python:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: jenkins-demo-python:${IMAGE_TAG:-latest}
+    container_name: jenkins-demo-python
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-5000}:5000"
+    environment:
+      FLASK_ENV: "${FLASK_ENV:-production}"
+    networks:
+      - jenkins-demo-network
+
+networks:
+  jenkins-demo-network:
+    driver: bridge
