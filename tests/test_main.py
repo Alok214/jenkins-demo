@@ -31,3 +31,13 @@ def test_calc_divide(client):
 def test_calc_divide_zero(client):
     res = client.get("/calc/divide?a=10&b=0")
     assert res.status_code == 400
+
+
+def test_calc_add_rejects_non_finite_values(client):
+    res = client.get("/calc/add?a=nan&b=2")
+    assert res.status_code == 400
+    assert "finite" in res.get_json()["error"].lower()
+
+    res = client.get("/calc/add?a=inf&b=2")
+    assert res.status_code == 400
+    assert "finite" in res.get_json()["error"].lower()

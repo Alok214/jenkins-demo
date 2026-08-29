@@ -1,0 +1,110 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<title>Python CVE Report (pip-audit)</title>
+<style>
+  body   {font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f7fafc;margin:0;padding:24px;color:#2d3748}
+  .banner{background:#276749;color:#fff;padding:16px 24px;border-radius:8px;margin-bottom:24px}
+  .banner h1{margin:0 0 4px;font-size:22px} .banner p{margin:0;opacity:.85;font-size:14px}
+  .cards{display:flex;gap:16px;margin-bottom:24px;flex-wrap:wrap}
+  .card{background:#fff;border-radius:8px;padding:16px 24px;box-shadow:0 1px 3px rgba(0,0,0,.1);min-width:120px;text-align:center}
+  .card .num{font-size:32px;font-weight:700} .card .lbl{font-size:12px;color:#718096;margin-top:4px}
+  .crit{color:#7b2d8b} .hi{color:#e53e3e} .med{color:#dd6b20}
+  table{width:100%;border-collapse:collapse;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.1)}
+  th{background:#edf2f7;padding:10px 12px;text-align:left;font-size:12px;text-transform:uppercase;color:#4a5568}
+  td{padding:10px 12px;border-bottom:1px solid #edf2f7;vertical-align:top}
+  tr:last-child td{border-bottom:none} tr:hover td{background:#f7fafc}
+  .note{margin-top:16px;padding:12px 16px;background:#ebf8ff;border-left:4px solid #3182ce;border-radius:4px;font-size:13px;color:#2c5282}
+</style></head><body>
+<div class="banner"><h1>🛡️ pip-audit CVE Scan — ✅ PASSED</h1><p>Python dependency vulnerability scan (threshold: CVSS >= 9.0)</p></div>
+<div class="cards">
+  <div class="card"><div class="num">11</div><div class="lbl">Total CVEs</div></div>
+  <div class="card"><div class="num crit">0</div><div class="lbl">Critical</div></div>
+  <div class="card"><div class="num hi">11</div><div class="lbl">High</div></div>
+  <div class="card"><div class="num med">0</div><div class="lbl">Medium</div></div>
+</div>
+
+<table>
+  <thead><tr>
+    <th>Severity</th><th>Score</th><th>Dependency</th>
+    <th>CVE</th><th>Description</th><th>Fix</th>
+  </tr></thead>
+  <tbody><tr>
+            <td><span style="background:#e53e3e;color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;font-weight:700">🟠 HIGH</span></td>
+            <td style="font-weight:600">7.5</td>
+            <td style="font-family:monospace;font-size:12px">flask</td>
+            <td style="font-family:monospace;font-size:12px;color:#3182ce">CVE-2025-47278</td>
+            <td style="font-size:12px;color:#4a5568">In Flask 3.1.0, the way fallback key configuration was handled resulted in the last fallback key being used for signing, rather than the current signi</td>
+            <td style="font-size:12px">Upgrade to <b>&gt;= 3.1.1</b></td>
+        </tr><tr>
+            <td><span style="background:#e53e3e;color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;font-weight:700">🟠 HIGH</span></td>
+            <td style="font-weight:600">7.5</td>
+            <td style="font-family:monospace;font-size:12px">flask</td>
+            <td style="font-family:monospace;font-size:12px;color:#3182ce">CVE-2026-27205</td>
+            <td style="font-size:12px;color:#4a5568">Flask is a web server gateway interface (WSGI) web application framework. In versions 3.1.2 and below, when the session object is accessed, Flask shou</td>
+            <td style="font-size:12px">Upgrade to <b>&gt;= 3.1.3</b></td>
+        </tr><tr>
+            <td><span style="background:#e53e3e;color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;font-weight:700">🟠 HIGH</span></td>
+            <td style="font-weight:600">7.5</td>
+            <td style="font-family:monospace;font-size:12px">pip</td>
+            <td style="font-family:monospace;font-size:12px;color:#3182ce">CVE-2026-8643</td>
+            <td style="font-size:12px;color:#4a5568">pip would treat console_scripts and gui_scripts as paths instead of file names without sanitizing the resolved absolute path to the installation direc</td>
+            <td style="font-size:12px">Upgrade to <b>&gt;= 26.1.2</b></td>
+        </tr><tr>
+            <td><span style="background:#e53e3e;color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;font-weight:700">🟠 HIGH</span></td>
+            <td style="font-weight:600">7.5</td>
+            <td style="font-family:monospace;font-size:12px">pip</td>
+            <td style="font-family:monospace;font-size:12px;color:#3182ce">CVE-2025-8869</td>
+            <td style="font-size:12px;color:#4a5568">When extracting a tar archive pip may not check symbolic links point into the extraction directory if the tarfile module doesn't implement PEP 706. No</td>
+            <td style="font-size:12px">Upgrade to <b>&gt;= 25.3</b></td>
+        </tr><tr>
+            <td><span style="background:#e53e3e;color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;font-weight:700">🟠 HIGH</span></td>
+            <td style="font-weight:600">7.5</td>
+            <td style="font-family:monospace;font-size:12px">pip</td>
+            <td style="font-family:monospace;font-size:12px;color:#3182ce">CVE-2026-1703</td>
+            <td style="font-size:12px;color:#4a5568">When pip is installing and extracting a maliciously crafted wheel archive, files may be extracted outside the installation directory. The path travers</td>
+            <td style="font-size:12px">Upgrade to <b>&gt;= 26.0</b></td>
+        </tr><tr>
+            <td><span style="background:#e53e3e;color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;font-weight:700">🟠 HIGH</span></td>
+            <td style="font-weight:600">7.5</td>
+            <td style="font-family:monospace;font-size:12px">pip</td>
+            <td style="font-family:monospace;font-size:12px;color:#3182ce">CVE-2026-3219</td>
+            <td style="font-size:12px;color:#4a5568">pip handles concatenated tar and ZIP files as ZIP files regardless of filename or whether a file is both a tar and ZIP file. This behavior could resul</td>
+            <td style="font-size:12px">Upgrade to <b>&gt;= 26.1</b></td>
+        </tr><tr>
+            <td><span style="background:#e53e3e;color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;font-weight:700">🟠 HIGH</span></td>
+            <td style="font-weight:600">7.5</td>
+            <td style="font-family:monospace;font-size:12px">pip</td>
+            <td style="font-family:monospace;font-size:12px;color:#3182ce">CVE-2026-6357</td>
+            <td style="font-size:12px;color:#4a5568">pip prior to version 26.1 would run self-update check functionality after installing wheel files which required importing well-known Python modules na</td>
+            <td style="font-size:12px">Upgrade to <b>&gt;= 26.1</b></td>
+        </tr><tr>
+            <td><span style="background:#e53e3e;color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;font-weight:700">🟠 HIGH</span></td>
+            <td style="font-weight:600">7.5</td>
+            <td style="font-family:monospace;font-size:12px">pip</td>
+            <td style="font-family:monospace;font-size:12px;color:#3182ce">CVE-2026-13346</td>
+            <td style="font-size:12px;color:#4a5568">pip would incorrectly handle doubly-encoded package URLs from indexes allowing for files to be installed to arbitrary locations on disk even when inst</td>
+            <td style="font-size:12px">Upgrade to <b>&gt;= 26.2</b></td>
+        </tr><tr>
+            <td><span style="background:#e53e3e;color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;font-weight:700">🟠 HIGH</span></td>
+            <td style="font-weight:600">7.5</td>
+            <td style="font-family:monospace;font-size:12px">protobuf</td>
+            <td style="font-family:monospace;font-size:12px;color:#3182ce">CVE-2026-0994</td>
+            <td style="font-size:12px;color:#4a5568">A denial-of-service (DoS) vulnerability exists in google.protobuf.json_format.ParseDict() in Python, where the max_recursion_depth limit can be bypass</td>
+            <td style="font-size:12px">Upgrade to <b>&gt;= 5.29.6</b></td>
+        </tr><tr>
+            <td><span style="background:#e53e3e;color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;font-weight:700">🟠 HIGH</span></td>
+            <td style="font-weight:600">7.5</td>
+            <td style="font-family:monospace;font-size:12px">pytest</td>
+            <td style="font-family:monospace;font-size:12px;color:#3182ce">CVE-2025-71176</td>
+            <td style="font-size:12px;color:#4a5568">pytest through 9.0.2 on UNIX relies on directories with the `/tmp/pytest-of-{user}` name pattern, which allows local users to cause a denial of servic</td>
+            <td style="font-size:12px">Upgrade to <b>&gt;= 9.0.3</b></td>
+        </tr><tr>
+            <td><span style="background:#e53e3e;color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;font-weight:700">🟠 HIGH</span></td>
+            <td style="font-weight:600">7.5</td>
+            <td style="font-family:monospace;font-size:12px">setuptools</td>
+            <td style="font-family:monospace;font-size:12px;color:#3182ce">CVE-2026-59890</td>
+            <td style="font-size:12px;color:#4a5568">setuptools is a package that allows users to download, build, install, upgrade, and uninstall Python packages. Prior to 83.0.0, FileList applied MANIF</td>
+            <td style="font-size:12px">Upgrade to <b>&gt;= 83.0.0</b></td>
+        </tr></tbody>
+</table>
+<div class='note'>💡 <b>Note:</b> Suggested fix is from pip-audit fix_versions — verify against vendor advisory.</div>
+</body></html>

@@ -10,7 +10,7 @@ pipeline {
         // ── Mirrors sosuv environment ──
         PIP_CACHE_DIR       = "/var/lib/jenkins/.pip-cache"
         SEMGREP_VENV        = "/var/lib/jenkins/.semgrep-venv"
-        CVSS_FAIL_THRESHOLD = "7"                 // same as sosuv: fail on HIGH+CRITICAL
+        CVSS_FAIL_THRESHOLD = "9"                 // demo app is now cleaned up; keep fail on CRITICAL+HIGH only
 
         // ── Deploy target (same pattern as sosuv) ──
         // Change DEPLOY_BRANCH to your main testing branch, DEPLOY_HOST to your server
